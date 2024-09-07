@@ -1,0 +1,252 @@
+.error-txt {
+  color: red;
+}
+// custom partial date css
+.date-picker-container {
+  position: relative;
+}
+input[type="text"] {
+  cursor: pointer;
+}
+.calendar-icon {
+  cursor: pointer;
+}
+.calendar-widget {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 320px;
+  background-color: #fff;
+  padding: 10px;
+  z-index: 1000;
+  border: 1px solid #c8c8c8;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+}
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.close-btn {
+  cursor: pointer;
+}
+table {
+  width: 100%;
+}
+td {
+  text-align: center;
+  color: #333333;
+  padding: 0.5em;
+  transition: box-shadow 0.2s;
+  border-radius: 3px;
+}
+.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+.today {
+  background-color: #f0f0f0;
+}
+.widget-wrapper {
+  width: 100%;
+  display: flex;
+  &-left {
+    margin-right: 24px;
+  }
+  &-left,
+  &-right {
+    min-width: 144px;
+  }
+}
+.month-widget-content.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+  .grid-item {
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-align: center;
+  }
+}
+.year-widget-content .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
+  &:not(:last-child) {
+    margin-bottom: 4px;
+  }
+  .grid-item {
+    padding: 4px 8px;
+    border-radius: 2px;
+    text-align: center;
+    &.current-month-year {
+      background-color: #f0f0f0;
+    }
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+}
+.grid-item {
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+.partial-date-button,
+.full-date-button {
+  width: 100%;
+  margin: 0 0 8px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-light);
+  color: #fff;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.month-widget-header {
+  padding: 8px;
+  text-align: center;
+}
+.btn {
+  background-color: transparent !important;
+  color: #000000;
+  border: none;
+  border-radius: 10px;
+  &:disabled {
+    color: #ccc !important;
+    cursor: not-allowed !important;
+  }
+  &:hover {
+    border: none !important;
+  }
+}
+td.disabled {
+  color: #ccc;
+  pointer-events: none;
+}
+
+input[type="text"] {
+  width: calc(100% - 30px);
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+.clear-button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: #000000;
+}
+.current {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+.disabled-arrow {
+  color: #ccc;
+  pointer-events: none;
+}
+
+.grid-item {
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  &.current {
+    background-color: #f0f0f0;
+    color: #000000;
+  }
+  &.non-clickable {
+    cursor: not-allowed;
+    color: #ccc;
+  }
+}
+
+.datepicker-widget-container {
+  font-size: 14px;
+}
+.grid-item.current.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+.date-picker-container
+  .datepicker-widget-container
+  .partial-overlay
+  .ui-overlaypanel {
+  top: auto !important;
+  left: 0 !important;
+  width: 100%;
+  .ui-overlaypanel-content {
+    .widget-wrapper {
+      width: 100%;
+      justify-content: space-between;
+      display: flex;
+      &-left,
+      &-right {
+        width: 45%;
+      }
+    }
+  }
+}
+
+.dropdown-container {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 45%;
+}
+
+.selected-option {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.selected-option:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.options-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.option {
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: initial !important;
+  background-color: #fff !important;
+}
+
+.option:hover,
+.option.selected {
+  background-color: #007bff !important;
+  color: #fff !important;
+}
